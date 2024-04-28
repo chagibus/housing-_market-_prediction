@@ -1,0 +1,12 @@
+  # Project 2. Ames Housing market
+   
+   **The folder has the following files:
+
+    1. DevP2_clean_lr_pr.ipynb has the codes for cleaning, preprocessing, lr and poly modeling, and predictions for the test samples.
+    
+    2. DevP2_ridge_lasso.ipynb has the Ridge and Lasso regressions codes. At the begining the file also has the cleaning and preprocessing of the test data set.
+   
+    3. DevP2_Presentation slides.pdf has the presentation slides along with figures based on modeled data generated from codes in files 1 and 2
+    
+# Project description:
+Ames Housing data is exhaustively detailed. However, without the help of machine learning, it is impossible to know if all these independent variables impact the dependent variable, 'SalePrice.' Towards this end, the given test data was cleaned by dropping columns with less than 20% data, duplicate columns, and columns that were not part of the test data. Additionally, data cleaning was done by replacing unwanted characters in the data frame with NaNs. Further cleaning was carried out by replacing NaNs with mean values for the numerical columns and mode values for the categorical columns. In the preprocessing step, all the categorical columns were extracted from the train data and dummied using OneHotEnconder and fit_transform functions from the sci-kit learn library. The train set data from the split (train:test, 80:20) was used to train the linear and polynomial regressions. The built models were validated by a test data set from the split. These linear and polynomial models were employed to predict the 'SalePrice' for the given test data, and the outcome was submitted to Keggle. To know if the models were overfitted, Ridge and Lasso regression methods were employed after adjusting the train and test (validation set) with 'StandardScaler.' As shown on slide 8 of the presentation deck, the Lasso model shows that more than 50% of the independent variables do not impact the sale price. Beyond project 2 submissions, I will continue to work on the outcome of the Lasso model by removing independent variables that have no impact on the housing price, retraining the linear regression, and predicting the price for test data. 
